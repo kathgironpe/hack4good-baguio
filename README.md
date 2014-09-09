@@ -15,4 +15,3 @@ For information about the event, please check [hack4good](http://hack4good.io)
 * Pundit for authorization
 * RSpec test suite
 * Twitter Bootstrap for the interface
-
