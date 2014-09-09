@@ -1,0 +1,11 @@
+/*
+ *= require bootstrap_and_overrides
+ */
+
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}

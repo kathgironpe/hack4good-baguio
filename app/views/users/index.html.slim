@@ -1,0 +1,12 @@
+div class="page-header"
+  h1 Participants
+table class="table table-striped"
+  thead
+    tr
+      th Name
+      th Email
+  tbody
+    - @users.each do |user|
+      tr
+        td= user.name
+        td= user.email

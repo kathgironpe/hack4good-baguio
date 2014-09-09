@@ -1,0 +1,9 @@
+= simple_form_for @challenge_partner do |f|
+  = f.input :name
+  = error_span(@challenge_partner[:name])
+  = f.input :description, as: :text
+  = error_span(@challenge_partner[:description])
+  = f.input :website
+  = error_span(@challenge_partner[:website])
+  = f.button :submit, 'Create Challenge Partner', class: 'btn btn-primary mr-10'
+  = link_to t('.cancel', default: t("helpers.links.cancel")), challenge_partners_path, class: 'btn btn-default'

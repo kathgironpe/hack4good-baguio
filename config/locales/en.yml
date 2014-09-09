@@ -1,0 +1,10 @@
+en:
+ pundit:
+   challenge_partner_policy:
+     update?: 'You cannot edit this challenge partner!'
+     create?: 'You cannot create challenge partners!'
+     destroy?: 'You cannot delete challenge partners!'
+   challenge_policy:
+     update?: 'You cannot edit this challenge!'
+     create?: 'You cannot create challenges!'
+     destroy?: 'You cannot delete challenges!'

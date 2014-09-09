@@ -1,0 +1,10 @@
+.editor
+= simple_form_for @challenge, html: { class: "form-horizontal" } do |f|
+  = f.association :challenge_partner
+  = error_span(@challenge[:challenge_partner_id])
+  = f.input :title
+  = error_span(@challenge[:title])
+  = f.input :description, as: :text
+  = error_span(@challenge[:description])
+  = f.button :submit, class: 'btn btn-primary mr-10'
+  = link_to t('.cancel', default: t("helpers.links.cancel")), challenges_path, class: 'btn btn-default'
