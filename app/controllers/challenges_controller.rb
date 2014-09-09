@@ -3,7 +3,7 @@ class ChallengesController < ApplicationController
   after_action :verify_authorized, except: [:index, :show]
 
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.order('title ASC')
   end
 
   def show
