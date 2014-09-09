@@ -36,10 +36,8 @@ class ChallengePartnersController < ApplicationController
     respond_to do |format|
       if @challenge_partner.update(challenge_partner_params)
         format.html { redirect_to @challenge_partner }
-        format.json { render :show, status: :ok, location: @challenge_partner }
       else
         format.html { render :edit }
-        format.json { render json: @challenge_partner.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -48,7 +46,6 @@ class ChallengePartnersController < ApplicationController
     @challenge_partner.destroy
     respond_to do |format|
       format.html { redirect_to challenge_partners_path }
-      format.json { head :no_content }
     end
   end
 
