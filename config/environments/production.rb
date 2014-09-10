@@ -91,4 +91,6 @@ Rails.application.configure do
 
   # GZIP compression
   config.middleware.use Rack::Deflater
+
+  config.secret_key =  ENV['secret']
 end
