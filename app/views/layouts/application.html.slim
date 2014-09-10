@@ -58,7 +58,8 @@ html lang='en'
               | Check code on Github
             a href="http://c.kat.pe" target="_blank"
               | Created by Katherine Pe
-            a href="http://travis-ci.org/katgironpe/hack4good-baguio" target="_blank"
-              img src="https://secure.travis-ci.org/katgironpe/hack4good-baguio.png" /
-            a href="https://codeclimate.com/github/katgironpe/hack4good-baguio" target="_blank"
-              img src="https://codeclimate.com/github/katgironpe/hack4good-baguio/badges/gpa.svg" /
+            - if Rails.env.production?
+              a href="http://travis-ci.org/katgironpe/hack4good-baguio" target="_blank"
+                img src="https://secure.travis-ci.org/katgironpe/hack4good-baguio.png" /
+              a href="https://codeclimate.com/github/katgironpe/hack4good-baguio" target="_blank"
+                img src="https://codeclimate.com/github/katgironpe/hack4good-baguio/badges/gpa.svg" /

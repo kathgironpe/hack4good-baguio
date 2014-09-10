@@ -20,7 +20,7 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    @challenge = Challenge.new(challenge_params.merge(user_id: current_user))
+    @challenge = Challenge.new(challenge_params.merge(user: current_user))
 
     authorize @challenge, :create?
 
