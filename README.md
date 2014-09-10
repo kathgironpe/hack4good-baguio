@@ -2,7 +2,6 @@
 
 [![Build Status](https://secure.travis-ci.org/katgironpe/hack4good-baguio.png)](http://travis-ci.org/katgironpe/hack4good-baguio)
 [![Code Climate](https://codeclimate.com/github/katgironpe/hack4good-baguio/badges/gpa.svg)](https://codeclimate.com/github/katgironpe/hack4good-baguio)
-[![Coverage Status](https://coveralls.io/repos/katgironpe/hack4good-baguio/badge.png)](https://coveralls.io/r/katgironpe/hack4good-baguio)
 
 This is an app for event registration, managing challenge partners and challenges.
 
