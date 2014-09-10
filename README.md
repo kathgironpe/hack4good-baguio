@@ -8,7 +8,7 @@ This is an app for event registration, managing challenge partners and challenge
 
 For information about the event, please check [hack4good](http://hack4good.io).
 
-There's nothing fancy or amazing here but it's a proof that something simple can be created **sensibly** in a short perid of time (less than 24 hours).
+There's nothing fancy or amazing here but it's a proof that something simple can be created **sensibly** in a short period of time (less than 24 hours).
 
 ## Requirements
 
