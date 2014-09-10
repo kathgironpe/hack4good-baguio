@@ -17,6 +17,7 @@ table class="table table-striped"
       tr
         td= link_to challenge.title, challenge_path(challenge)
         td
-          = link_to t('.edit', default: t("helpers.links.edit")), edit_challenge_path(challenge), class: 'btn btn-default btn-xs mr-10'
-          = link_to t('.destroy', default: t("helpers.links.destroy")), challenge_path(challenge), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-xs btn-danger'
+          - if current_user.try(:admin)
+            = link_to t('.edit', default: t("helpers.links.edit")), edit_challenge_path(challenge), class: 'btn btn-default btn-xs mr-10'
+            = link_to t('.destroy', default: t("helpers.links.destroy")), challenge_path(challenge), method: :delete, data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-xs btn-danger'
 
