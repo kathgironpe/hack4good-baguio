@@ -16,7 +16,7 @@ gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
 gem 'slim-rails'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'master'
 gem 'uglifier', '>= 1.3.0'
 
 group :development do
