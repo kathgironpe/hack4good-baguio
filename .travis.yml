@@ -6,3 +6,8 @@ addons:
   postgresql: "9.3"
 before_script:
   - psql -c 'create database h4baguio_test;' -U postgres
+  - "bundle exec rake db:migrate"
+env:
+- DISPLAY=:99.0
+script:
+- "bundle exec rspec spec"
