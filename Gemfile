@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '~> 3.3.0'
 gem 'draper'
@@ -9,14 +11,12 @@ gem 'friendly_id', '~> 5.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'kramdown'
-gem 'less-rails'
 gem 'pg'
 gem 'pundit'
 gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
 gem 'slim-rails'
-gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'master'
 gem 'uglifier', '>= 1.3.0'
 
 group :development do

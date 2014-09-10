@@ -1,54 +1,51 @@
 doctype html
-html lang="en"
+html lang='en'
   head
-    meta charset="utf-8"
-    meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title= content_for?(:title) ? yield(:title) : "Hack4Good 0.6 Baguio"
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    title= content_for?(:title) ? yield(:title) : 'Hack4Good 0.6 Baguio'
     = csrf_meta_tags
-
-    /! Le HTML5 shim, for IE6-8 support of HTML elements
-    /[if lt IE 9]
-      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
-    = stylesheet_link_tag "application", media: "all"
+    = stylesheet_link_tag 'application', media: 'all'
     = favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '144x144'
     = favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '114x114'
     = favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '72x72'
     = favicon_link_tag 'apple-touch-icon-precomposed.png', rel: 'apple-touch-icon-precomposed', type: 'image/png'
     = favicon_link_tag 'favicon.ico', rel: 'shortcut icon'
-    = javascript_include_tag "application"
+    = javascript_include_tag 'application'
 
   body
     a.fork.hidden-sm href='https://github.com/katgironpe/hack4good-baguio'
       img alt='Fork me on GitHub' src='https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png'
 
-    .navbar.navbar-inverse.navbar-static-top
+    .navbar.navbar-static-top
         .container
-          button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"
+          button.navbar-toggle type='button' data-toggle='collapse' data-target='.navbar-responsive-collapse'
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand href="/"
-            | Hack4Good 0.6 Baguio
+          a.logo href='/'
+            = image_tag 'logo.png'
           .navbar-collapse.collapse.navbar-responsive-collapse
-            ul.nav.navbar-nav.white-links
-              li= link_to "Challenges", challenges_path
-              li= link_to "Challenge Partners", challenge_partners_path
-              li= link_to "Participants", users_path
             .nav.navbar-nav.navbar-right
               - if current_user
                 .dropdown.mt-10
-                  button#dropdownMenu1.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                  button#dropdownMenu1.btn.btn-default.dropdown-toggle data-toggle='dropdown' type='button'
                     | Account
                     span.caret
-                  ul.dropdown-menu aria-labelledby="dropdownMenu1" role="menu"
-                    li role="presentation"= link_to 'Edit Profile', account_path
-                    li.divider role="presentation"
-                    li role="presentation"= link_to 'Sign out', sign_out_path
+                  ul.dropdown-menu aria-labelledby='dropdownMenu1' role='menu'
+                    li role='presentation'= link_to 'Edit Profile', account_path
+                    li.divider role='presentation'
+                    li role='presentation'= link_to 'Sign out', sign_out_path
               - else
                 ul.nav.navbar-nav.white-links
-                  li= link_to "Sign in", sign_in_path
-                  li= link_to "Sign up", sign_up_path
+                  li= link_to 'Sign in', sign_in_path
+                  li= link_to 'Sign up', sign_up_path
+            ul.nav.nav-tabs
+              = nav_link 'Challenges', root_path
+              = nav_link 'Challenge Partners', challenge_partners_path
+              = nav_link 'Participants', users_path
+
 
     .container
       .row
@@ -64,6 +61,6 @@ html lang="en"
 
 
       footer
-        nav.navbar.navbar-default.navbar-fixed-bottom role="navigation"
+        nav.navbar.navbar-default.navbar-fixed-bottom role='navigation'
           p.navbar-text
             | &copy 2014 Geekcamp Baguio.
