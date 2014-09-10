@@ -23,7 +23,6 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
   gem 'quiet_assets'
-  gem 'therubyracer'
   gem 'spring'
 end
 
