@@ -2,6 +2,11 @@
 div class="page-header"
   h1 Challenges
   = link_to 'New Challenge', new_challenge_path, class: 'btn btn-primary' if current_user.try(:admin)
+form role="form" action='/'
+  .form-group
+    input#search.form-control placeholder=("Enter search critera") name="search"
+    button.btn.btn-default type="submit"  Search
+
 table class="table table-striped"
   thead
     tr

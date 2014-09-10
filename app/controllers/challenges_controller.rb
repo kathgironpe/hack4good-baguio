@@ -4,6 +4,7 @@ class ChallengesController < ApplicationController
 
   def index
     @challenges = Challenge.order('title ASC')
+    @challenges = Challenge.search(params[:search].downcase).order('title ASC') if params[:search].present?
   end
 
   def show
