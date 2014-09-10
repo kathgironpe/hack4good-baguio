@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature 'Manage Challenge Partner' do
-  let(:admin) { create(:user, admin: true) }
-  let(:user) { create(:user, admin: false) }
+  let(:admin) { create(:admin) }
+  let(:user) { create(:user) }
 
   scenario 'Admin creates a new challenge partner' do
     sign_in(admin)

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature 'Manage Challenge' do
-  let(:admin) { create(:user, admin: true) }
-  let(:user) { create(:user, admin: false) }
+  let(:admin) { create(:admin) }
+  let(:user) { create(:user) }
   let!(:challenge_partner) { create(:challenge_partner) }
 
   scenario 'Admin creates a new challenge' do
@@ -15,7 +15,7 @@ feature 'Manage Challenge' do
     fill_in 'challenge_title', with: 'Title'
     fill_in 'challenge_description', with: 'Description'
     click_button 'Create Challenge'
-    expect(page).to have_content('Edit')
+    expect(page).to have_content('Description')
   end
 
   scenario 'User creates a new challenge partner' do
