@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 %w(
+  coveralls
   factory_girl
   pundit/rspec
   rspec/rails
@@ -9,10 +10,14 @@ require File.expand_path('../../config/environment', __FILE__)
   require d
 end
 
+Coveralls.wear!
+
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.mock_with :rspec
+  config.include ControllerHelpers, type: :controller
+  config.include Devise::TestHelpers, type: :controller
   config.include FactoryGirl::Syntax::Methods
   config.include Warden::Test::Helpers
 

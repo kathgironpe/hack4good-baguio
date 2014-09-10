@@ -15,9 +15,6 @@ html lang='en'
     = javascript_include_tag 'application'
 
   body
-    a.fork.hidden-sm href='https://github.com/katgironpe/hack4good-baguio'
-      img alt='Fork me on GitHub' src='https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png'
-
     .navbar.navbar-static-top
         .container
           button.navbar-toggle type='button' data-toggle='collapse' data-target='.navbar-responsive-collapse'
@@ -27,20 +24,13 @@ html lang='en'
           a.logo href='/'
             = image_tag 'logo.png'
           .navbar-collapse.collapse.navbar-responsive-collapse
-            .nav.navbar-nav.navbar-right
+            ul.nav.navbar-nav.navbar-right
               - if current_user
-                .dropdown.mt-10
-                  button#dropdownMenu1.btn.btn-default.dropdown-toggle data-toggle='dropdown' type='button'
-                    | Account
-                    span.caret
-                  ul.dropdown-menu aria-labelledby='dropdownMenu1' role='menu'
-                    li role='presentation'= link_to 'Edit Profile', account_path
-                    li.divider role='presentation'
-                    li role='presentation'= link_to 'Sign out', sign_out_path
+                li= link_to 'Account', account_path
+                li= link_to 'Sign out', sign_out_path
               - else
-                ul.nav.navbar-nav.white-links
-                  li= link_to 'Sign in', sign_in_path
-                  li= link_to 'Sign up', sign_up_path
+                li= link_to 'Sign in', sign_in_path
+                li= link_to 'Sign up', sign_up_path
             ul.nav.nav-tabs
               = nav_link 'Challenges', root_path
               = nav_link 'Challenge Partners', challenge_partners_path
@@ -61,6 +51,16 @@ html lang='en'
 
 
       footer
-        nav.navbar.navbar-default.navbar-fixed-bottom role='navigation'
-          p.navbar-text
-            | &copy 2014 Geekcamp Baguio.
+        nav.well
+          p
+            | The code for this Ruby on Rails 4 application is open source. &nbsp; &nbsp; &nbsp;
+            a href="https://github.com/katgironpe/hack4good-baguio" target="_blank"
+              | Check code on Github
+            a href="http://c.kat.pe" target="_blank"
+              | Created by Katherine Pe
+            a href="http://travis-ci.org/katgironpe/hack4good-baguio" target="_blank"
+              img src="https://secure.travis-ci.org/katgironpe/hack4good-baguio.png" /
+            a href="https://coveralls.io/r/katgironpe/hack4good-baguio" target="_blank"
+              img src="https://coveralls.io/repos/katgironpe/hack4good-baguio/badge.png" /
+            a href="https://codeclimate.com/github/katgironpe/hack4good-baguio" target="_blank"
+              img src="https://codeclimate.com/github/katgironpe/hack4good-baguio/badges/gpa.svg" /

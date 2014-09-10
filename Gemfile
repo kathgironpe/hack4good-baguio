@@ -5,6 +5,7 @@ ruby '2.1.2'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'coveralls', require: false
 gem 'devise', '~> 3.3.0'
 gem 'draper'
 gem 'friendly_id', '~> 5.0'

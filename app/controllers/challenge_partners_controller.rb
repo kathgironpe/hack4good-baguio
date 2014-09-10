@@ -43,6 +43,7 @@ class ChallengePartnersController < ApplicationController
   end
 
   def destroy
+    authorize @challenge_partner, :update?
     @challenge_partner.destroy
     respond_to do |format|
       format.html { redirect_to challenge_partners_path }

@@ -4,7 +4,7 @@ class ChallengesController < ApplicationController
 
   def index
     @challenges = Challenge.order('title ASC')
-    @challenges = Challenge.search(params[:search].downcase).order('title ASC') if params[:search].present?
+    @challenges = Challenge.search(params[:search].downcase).order('title ASC') if params[:search]
   end
 
   def show
@@ -20,7 +20,7 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    @challenge = Challenge.new(challenge_params.merge(user_id: current_user.id))
+    @challenge = Challenge.new(challenge_params.merge(user_id: current_user))
 
     authorize @challenge, :create?
 

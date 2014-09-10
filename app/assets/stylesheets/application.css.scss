@@ -31,7 +31,7 @@ form {
   }
 
   textarea {
-    min-height: 400px;
+    min-height: 250px;
   }
 }
 
@@ -52,4 +52,11 @@ form {
 .navbar-nav > li > a {
   padding-bottom: 8px;
   padding-top: 8px;
+}
+
+.well {
+  margin-top: 150px;
+  a {
+    margin-right: 10px;
+  }
 }
