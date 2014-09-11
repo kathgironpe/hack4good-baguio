@@ -11,7 +11,7 @@ table class="table table-striped"
     - @challenge_partners.each do |challenge_partner|
       tr
         td= link_to challenge_partner.name, challenge_partner_path(challenge_partner)
-        td= challenge_partner.website
+        td= link_to challenge_partner.website, challenge_partner.website, target: '_blank'
         td
           - if current_user.try(:admin)
             = link_to t('.edit', default: t("helpers.links.edit")), edit_challenge_partner_path(challenge_partner), class: 'btn btn-default btn-xs mr-10'

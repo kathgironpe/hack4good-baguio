@@ -1,11 +1,8 @@
 div class="page-header"
   h1 = @challenge_partner.name
 
-p
-  strong Name:
-  br
-  = @challenge_partner.name
-  = to_html(@challenge_partner.description)
+= to_html(@challenge_partner.description)
+
 p
   strong Website:
   br
