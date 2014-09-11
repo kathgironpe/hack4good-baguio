@@ -10,5 +10,8 @@ class Challenge < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  scope :search, ->(q) { where('title ILIKE ? OR description ILIKE ?', "%#{q}%", "%#{q}%") }
+  def self.search(q)
+    q = Sanitize.fragment(q)
+    where('title ILIKE ? OR description ILIKE ?', "%#{q}%", "%#{q}%")
+  end
 end

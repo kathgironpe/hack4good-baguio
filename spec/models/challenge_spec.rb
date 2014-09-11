@@ -22,5 +22,13 @@ describe Challenge do
         expect(Challenge.search('trees').count).to eq(0)
       end
     end
+
+    context 'when the valid search criteria has html' do
+      let(:text) { '<strong>children</strong>' }
+
+      it 'sanitizes search text and returns a result' do
+        expect(Challenge.search(text).count).to eq(1)
+      end
+    end
   end
 end
