@@ -30,7 +30,6 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'formulaic', '~> 0.1.0'
   gem 'launchy'
   gem 'rspec-rails', '~> 3.0.2'
   gem 'selenium-webdriver', '~> 2.42'
